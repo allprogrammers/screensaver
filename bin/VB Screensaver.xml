@@ -1,0 +1,149 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VB Screensaver
+</name>
+</assembly>
+<members>
+<member name="T:ScreenSaver.frmOptions">
+ <summary>
+ This code just closes the form, when the user decides to Cancel.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmOptions.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ This code changes the values in the Options object to the new user
+ selected values, and saves it to disk.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmOptions.frmOptions_Load(System.Object,System.EventArgs)">
+ <summary>
+ This code loads the current user defined options and sets the UI elements 
+ in this form to their proper values.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmOptions.btnDirectory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Browse for the folder that we should read from
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="T:ScreenSaver.frmOptions.restrictedTextBoxClass">
+ <summary>
+ This is a base class which restricts text boxes to numeric inputs and arrow navigation.  
+ (It's modified from an existing snippet designed for combo boxes.)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmScreenSaver.frmSceenSaver_Load(System.Object,System.EventArgs)">
+ <summary>
+ This subroutine initializes the Screen Saver form when it is loaded
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmScreenSaver.frmSceenSaver_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Close the screen saver when the user moves the mouse. Unfortunately, the 
+   MouseMove event is fired by some very trivial moves of the mouse, so 
+   instead, verify that the mouse has actually been moved by at least
+   a few pixels before exiting.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmScreenSaver.frmSceenSaver_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ The subroutine causes the screen saver to close if the user pushes a mouse button.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmScreenSaver.tmrUpdateScreen_Tick(System.Object,System.EventArgs)">
+ <summary>
+ ' This code is executed whenever the timer tick event if fired. It draws a picture and label to the screen.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.frmScreenSaver.SetLabelLocation">
+ <summary>
+ Just a helper app to center the label appropriately in the window
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:ScreenSaver.Options">
+ <summary>
+ This is the class that holds the Options information.  The Options information
+   is defined as a class so that it can be easily serialized and deserialized.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ScreenSaver.Options.ShowDate">
+ <summary>
+ Set or get whether or not to show the date
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ScreenSaver.Options.UseSubdirectories">
+ <summary>
+ Set or get whether or not to look in subdirectories for pictures
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ScreenSaver.Options.ShowTags">
+ <summary>
+ Set or get whether or not to show tags
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ScreenSaver.Options.Directory">
+ <summary>
+ Set or get which directory to look in for pictures
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ScreenSaver.Options.Speed">
+ <summary>
+ Set or get what speed at which to show pictures
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.Options.LoadOptions">
+ <summary>
+ This function loads the user defined options from the application settings file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ScreenSaver.Options.SaveOptions">
+ <summary>
+ This function saves the user defined options to the application settings file.
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
